@@ -7,7 +7,7 @@ import com.appneta.automation.pageobject.MenuItems;
 
 public class AppView {
 
-	public static void appViewWebApp(WebDriver driver) {
+	public static boolean appViewWebApp(WebDriver driver) {
 		driver.get("https://signon.pv-st.appneta.com/signon/login.html");
 		LoginPage.username(driver).sendKeys("testhouse@appneta.com");
 		LoginPage.password(driver).sendKeys("@ppN3ta!");
@@ -16,9 +16,11 @@ public class AppView {
 		//access AppView through menus
 		MenuItems.appViewButton(driver).click();
 		MenuItems.webApp(driver).click();
+		
+		return true;
 	}
 
-	public static void appViewWebDash(WebDriver driver) {
+	public static boolean appViewWebDash(WebDriver driver) {
 		driver.get("https://signon.pv-st.appneta.com/signon/login.html");
 		LoginPage.username(driver).sendKeys("testhouse@appneta.com");
 		LoginPage.password(driver).sendKeys("@ppN3ta!");
@@ -27,9 +29,11 @@ public class AppView {
 		//access AppView through menus
 		MenuItems.appViewButton(driver).click();
 		MenuItems.webDash(driver).click();
+		
+		return true;
 	}
 
-	public static void appViewWebMon(WebDriver driver) {
+	public static boolean appViewWebMon(WebDriver driver) {
 		driver.get("https://signon.pv-st.appneta.com/signon/login.html");
 		LoginPage.username(driver).sendKeys("testhouse@appneta.com");
 		LoginPage.password(driver).sendKeys("@ppN3ta!");
@@ -38,9 +42,11 @@ public class AppView {
 		//access AppView through menus
 		MenuItems.appViewButton(driver).click();
 		MenuItems.webMon(driver).click();
+		
+		return true;
 	}
 
-	public static void appViewCompView(WebDriver driver) {
+	public static boolean appViewCompView(WebDriver driver) {
 		driver.get("https://signon.pv-st.appneta.com/signon/login.html");
 		LoginPage.username(driver).sendKeys("testhouse@appneta.com");
 		LoginPage.password(driver).sendKeys("@ppN3ta!");
@@ -49,9 +55,11 @@ public class AppView {
 		//access AppView through menus
 		MenuItems.appViewButton(driver).click();
 		MenuItems.compView(driver).click();
+		
+		return true;
 	}
 
-	public static void appViewEvents(WebDriver driver) {
+	public static boolean appViewEvents(WebDriver driver) {
 		driver.get("https://signon.pv-st.appneta.com/signon/login.html");
 		LoginPage.username(driver).sendKeys("testhouse@appneta.com");
 		LoginPage.password(driver).sendKeys("@ppN3ta!");
@@ -60,6 +68,8 @@ public class AppView {
 		//access AppView through menus
 		MenuItems.appViewButton(driver).click();
 		MenuItems.events(driver).click();
+		
+		return true;
 	}
 
 }
