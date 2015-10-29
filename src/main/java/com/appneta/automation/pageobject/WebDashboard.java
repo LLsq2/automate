@@ -9,4 +9,8 @@ public class WebDashboard {
 	public static WebElement dashboardTitle(WebDriver driver) {
 		return driver.findElement(By.className("dashboard-name"));
 	}
+	
+	public static WebElement editDashboardTitle(WebDriver driver) {
+		return driver.findElement(By.className("fa fa-pencil edit-toggle clickable dashboard-edit"));
+	}
 }

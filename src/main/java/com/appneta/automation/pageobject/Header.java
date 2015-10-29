@@ -9,4 +9,8 @@ public class Header {
 	public static WebElement headerTitle(WebDriver driver) {
 		return driver.findElement(By.cssSelector("#header div#header-content h1"));
 	}
+	
+	public static WebElement username(WebDriver driver) {
+		return driver.findElement(By.cssSelector("#user-menu span span"));
+	}
 }
