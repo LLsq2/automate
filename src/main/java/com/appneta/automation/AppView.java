@@ -2,6 +2,8 @@ package com.appneta.automation;
 
 import org.openqa.selenium.WebDriver;
 
+import com.appneta.automation.pageobject.ComparisonViews;
+import com.appneta.automation.pageobject.Events;
 import com.appneta.automation.pageobject.Header;
 import com.appneta.automation.pageobject.LoginPage;
 import com.appneta.automation.pageobject.MenuItems;
@@ -168,9 +170,15 @@ public class AppView {
 		helper.checkText(Header.username(driver), "testhouse@appneta.com");
 		System.out.println("...done");
 		
-		//check buttons
-		
-
+		System.out.print("Check entries list");
+		ComparisonViews.entriesDropDown(driver).isDisplayed();
+		ComparisonViews.entriesDropDown(driver).click();
+		helper.checkText(ComparisonViews.entriesDropDownList(driver, 1), "10");
+		helper.checkText(ComparisonViews.entriesDropDownList(driver, 2), "25");
+		helper.checkText(ComparisonViews.entriesDropDownList(driver, 3), "50");
+		helper.checkText(ComparisonViews.entriesDropDownList(driver, 4), "100");
+		helper.checkText(ComparisonViews.entriesDropDownList(driver, 5), "All");
+		System.out.println("...done");
 	}
 
 	public static void appViewEvents(WebDriver driver) throws NotMatchException {
@@ -194,6 +202,17 @@ public class AppView {
 		Header.settingsButton(driver).isDisplayed();
 		Header.username(driver).isDisplayed();
 		helper.checkText(Header.username(driver), "testhouse@appneta.com");
+		System.out.println("...done");
+		
+		System.out.print("Check empty message");
+		helper.checkText(Events.emptyText(driver), "There are no events for the time period.");
+		System.out.println("...done");
+		System.out.print("Check help function");
+		Events.helpButton(driver).isDisplayed();
+		Events.helpButton(driver).click();
+		Events.helpWindow(driver).isDisplayed();
+		helper.checkText(Events.helpWindowTitle(driver), "Quick Help");
+		Events.helpWindowCloseButton(driver).click();
 		System.out.println("...done");
 
 	}

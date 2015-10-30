@@ -15,7 +15,7 @@ public class WebMonitor {
 	}
 	
 	public static WebElement requestGlobalMonitorButton(WebDriver driver) {
-		return driver.findElement(By.className("ui-button ui-button-success request-web-monitor-btn"));
+		return driver.findElement(By.cssSelector(".ui-button.ui-button-success.request-web-monitor-btn"));
 	}
 	
 	public static WebElement expandAllButton(WebDriver driver) {

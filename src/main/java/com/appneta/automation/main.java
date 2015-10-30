@@ -19,18 +19,18 @@ public class main {
 		boolean boo4 = true;
 		boolean boo5 = true;
 		
-//		try {
-//			AppView.appViewWebApplications(driver);
-//		}
-//		catch(NotMatchException e) {
-//			boo1 = false;
-//		}
-//		try {
-//			AppView.appViewWebDashboard(driver);
-//		}
-//		catch(NotMatchException e) {
-//			boo2 = false;
-//		}
+		try {
+			AppView.appViewWebApplications(driver);
+		}
+		catch(NotMatchException e) {
+			boo1 = false;
+		}
+		try {
+			AppView.appViewWebDashboard(driver);
+		}
+		catch(NotMatchException e) {
+			boo2 = false;
+		}
 		try{
 			AppView.appViewWebMonitors(driver);
 		}
@@ -38,18 +38,18 @@ public class main {
 			boo3 = false;
 			System.out.println("Text did not match");
 		}
-//		try {
-//			AppView.appViewComparisonViews(driver);
-//		}
-//		catch(NotMatchException e) {
-//			boo4 = false;
-//		}
-//		try {
-//			AppView.appViewEvents(driver);
-//		}
-//		catch(NotMatchException e) {
-//			boo5 = false;
-//		}
+		try {
+			AppView.appViewComparisonViews(driver);
+		}
+		catch(NotMatchException e) {
+			boo4 = false;
+		}
+		try {
+			AppView.appViewEvents(driver);
+		}
+		catch(NotMatchException e) {
+			boo5 = false;
+		}
 		
 		driver.quit();
 
