@@ -51,9 +51,9 @@ public class WebApplication {
 	}
 	
 	public static WebElement webApplicationFormAppDropDownList(WebDriver driver, int num) {
-		StringBuilder locator = new StringBuilder("#ember637 .form-horizontal .control-group");
-		for (int i=0; i<num; i++) {
-			locator.append(" option");
+		StringBuilder locator = new StringBuilder("#ember637 .form-horizontal .control-group option");
+		for (int i=1; i<num; i++) {
+			locator.append("+option");
 		}
 		return driver.findElement(By.cssSelector(locator.toString()));
 	}

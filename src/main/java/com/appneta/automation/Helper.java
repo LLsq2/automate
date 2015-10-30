@@ -18,7 +18,7 @@ public class Helper {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public void pause(int secs) {
 		secs*=10;
 		try {

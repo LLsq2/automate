@@ -13,45 +13,43 @@ public class main {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-//		driver.get("http://www.google.com");
-//		driver.findElement(By.className("notfound"));
-		
 		boolean boo1 = true;
 		boolean boo2 = true;
 		boolean boo3 = true;
 		boolean boo4 = true;
 		boolean boo5 = true;
 		
-		try {
-			AppView.appViewWebApplications(driver);
-		}
-		catch(NotMatchException e) {
-			boo1 = false;
-		}
-		try {
-			AppView.appViewWebDashboard(driver);
-		}
-		catch(NotMatchException e) {
-			boo2 = false;
-		}
+//		try {
+//			AppView.appViewWebApplications(driver);
+//		}
+//		catch(NotMatchException e) {
+//			boo1 = false;
+//		}
+//		try {
+//			AppView.appViewWebDashboard(driver);
+//		}
+//		catch(NotMatchException e) {
+//			boo2 = false;
+//		}
 		try{
 			AppView.appViewWebMonitors(driver);
 		}
 		catch(NotMatchException e) {
 			boo3 = false;
+			System.out.println("Text did not match");
 		}
-		try {
-			AppView.appViewComparisonViews(driver);
-		}
-		catch(NotMatchException e) {
-			boo4 = false;
-		}
-		try {
-			AppView.appViewEvents(driver);
-		}
-		catch(NotMatchException e) {
-			boo5 = false;
-		}
+//		try {
+//			AppView.appViewComparisonViews(driver);
+//		}
+//		catch(NotMatchException e) {
+//			boo4 = false;
+//		}
+//		try {
+//			AppView.appViewEvents(driver);
+//		}
+//		catch(NotMatchException e) {
+//			boo5 = false;
+//		}
 		
 		driver.quit();
 

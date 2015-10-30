@@ -11,6 +11,15 @@ public class WebDashboard {
 	}
 	
 	public static WebElement editDashboardTitle(WebDriver driver) {
-		return driver.findElement(By.className("fa fa-pencil edit-toggle clickable dashboard-edit"));
+		return driver.findElement(By.cssSelector(".fa.fa-pencil.edit-toggle.clickable.dashboard-edit"));
 	}
+	
+	public static WebElement switchDashboardButton(WebDriver driver) {
+		return driver.findElement(By.cssSelector("#dashboards-top-bar button"));
+	}
+	
+	public static WebElement newDashboardButton(WebDriver driver) {
+		return driver.findElement(By.cssSelector(".ui-button.ui-button-success"));
+	}
+	
 }
