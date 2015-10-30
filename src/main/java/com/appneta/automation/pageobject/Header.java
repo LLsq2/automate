@@ -10,6 +10,18 @@ public class Header {
 		return driver.findElement(By.cssSelector("#header div#header-content h1"));
 	}
 	
+	public static WebElement shareButton (WebDriver driver) {
+		return driver.findElement(By.cssSelector(".dropdown-toggle.pull-right"));
+	}
+	
+	public static WebElement messagesButton(WebDriver driver) {
+		return driver.findElement(By.cssSelector("#user-messages a"));
+	}
+	
+	public static WebElement settingsButton(WebDriver driver) {
+		return driver.findElement(By.cssSelector("#settings-menu span"));
+	}
+	
 	public static WebElement username(WebDriver driver) {
 		return driver.findElement(By.cssSelector("#user-menu span span"));
 	}
