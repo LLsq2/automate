@@ -16,6 +16,8 @@ public class main {
 		boolean boo3 = AppView.appViewWebMon(driver);
 		boolean boo4 = AppView.appViewCompView(driver);
 		boolean boo5 = AppView.appViewEvents(driver);
+		
+		driver.quit();
 
 	}
 
